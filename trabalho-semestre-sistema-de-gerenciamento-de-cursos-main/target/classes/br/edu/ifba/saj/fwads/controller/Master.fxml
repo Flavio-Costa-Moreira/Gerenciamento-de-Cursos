@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane fx:id="masterPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: DimGray;" styleClass="main" stylesheets="@assets/style.css" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.edu.ifba.saj.fwads.controller.MasterController">
+   <top>
+      <AnchorPane prefHeight="100.0" style="-fx-background-color: black;" styleClass="top" stylesheets="@assets/style.css" BorderPane.alignment="CENTER">
+         <children>
+            <Label fx:id="userEmail" layoutX="629.0" layoutY="28.0" onMouseClicked="#logOff" prefHeight="50.0" prefWidth="170.0" text="Administrador" textFill="#12ff00" AnchorPane.rightAnchor="1.0">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <graphic>
+                  <Circle fx:id="userPicture" fill="#f6f8fa" radius="25.0" stroke="#12ff00" strokeType="INSIDE" />
+               </graphic>
+            </Label>
+            <Label alignment="CENTER" layoutX="176.0" layoutY="6.0" prefHeight="88.0" prefWidth="459.0" text="Menu Inicial" textAlignment="JUSTIFY" textFill="#12ff00">
+               <font>
+                  <Font name="Times New Roman" size="55.0" />
+               </font>
+            </Label>
+         </children></AnchorPane>
+   </top>
+   <left>
+      <VBox fx:id="menu" maxWidth="1.7976931348623157E308" minWidth="-Infinity" prefHeight="500.0" prefWidth="327.0" style="-fx-background-color: black;" styleClass="left" stylesheets="@assets/style.css" BorderPane.alignment="TOP_LEFT">
+         <children>
+            <Button alignment="CENTER" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#showHome" prefHeight="132.0" prefWidth="310.0" style="-fx-background-color: black;" styleClass="btn-menu-selected" stylesheets="@assets/style.css" text="Página Inicial" textFill="#12ff00">
+               <padding>
+                  <Insets bottom="5.0" left="10.0" />
+               </padding>
+               <font>
+                  <Font size="30.0" />
+               </font>
+            </Button>
+            <Button alignment="CENTER" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#showCadAlunos" prefHeight="135.0" prefWidth="327.0" style="-fx-background-color: black;" styleClass="btn-menu" stylesheets="@assets/style.css" text="Cadastro Alunos" textFill="#12ff00">
+               <padding>
+                  <Insets bottom="5.0" left="10.0" />
+               </padding>
+               <font>
+                  <Font size="30.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="72.0" fitWidth="69.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@assets/reading-book.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button alignment="CENTER" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#showListCursos" prefHeight="131.0" prefWidth="327.0" style="-fx-background-color: black;" styleClass="btn-menu" stylesheets="@assets/style.css" text="Cursos" textFill="#12ff00">
+               <padding>
+                  <Insets bottom="5.0" left="10.0" />
+               </padding>
+               <font>
+                  <Font size="30.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="71.0" fitWidth="80.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@assets/download1-removebg-preview.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button alignment="CENTER" mnemonicParsing="false" onAction="#showListTurmas" prefHeight="143.0" prefWidth="327.0" style="-fx-background-color: Black;" styleClass="btn-menu" stylesheets="@assets/style.css" text="Turmas" textFill="#12ff00">
+               <font>
+                  <Font size="30.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="73.0" fitWidth="72.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@assets/study.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+         </children></VBox>
+   </left>
+   <center>
+      <Label prefHeight="106.0" prefWidth="346.0" text="Bem-vindo ao Sistema Learn" textFill="#12ff00" BorderPane.alignment="CENTER">
+         <font>
+            <Font name="Trebuchet MS" size="27.0" />
+         </font>
+      </Label>
+   </center>
+</BorderPane>
